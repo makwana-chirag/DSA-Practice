@@ -11,6 +11,7 @@ const eachElementOccuranceCount = (arr) => {
             if(processed[j].value == arr[i]) {
                 processed[j].count++
                 found = true;
+                break;
             }
         }
 

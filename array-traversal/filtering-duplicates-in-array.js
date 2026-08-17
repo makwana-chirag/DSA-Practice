@@ -9,7 +9,7 @@ const filteringDuplicateCount = (arr) => {
         let found = false ;
 
          for(let j = 0 ; j < process.length ; j++) {
-            if(process[j].value == arr[i]){
+            if(process[j].value === arr[i]){
                 process[j].count++
                 found = true;
                 break
