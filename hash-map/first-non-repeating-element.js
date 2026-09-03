@@ -1,4 +1,4 @@
-const array = [1,2,3,4,1,2,3,4,5];
+const array = [1,2,3,1,2,3,4,5,5];
 
 const nonRepeatedElement = (arr) => {
 
@@ -7,7 +7,7 @@ const nonRepeatedElement = (arr) => {
     for(let i = 0 ; i < arr.length ; i++) {
         if(count.has(arr[i])) {
             const previousCount =count.get(arr[i]) ;
-            count.set(arr[i] , previousCount++)
+            count.set(arr[i] , previousCount+1)
 
         } else {
             count.set(arr[i], 1)
@@ -15,7 +15,7 @@ const nonRepeatedElement = (arr) => {
     }
 
 
-    for ( [value, occurance] of count) {
+    for ( const [value, occurance] of count) {
         if (occurance == 1) {
             return value;
         }
@@ -24,4 +24,4 @@ const nonRepeatedElement = (arr) => {
     return -1
 }
 
-console.log(nonRepeatedElement(arr));
+console.log(nonRepeatedElement(array));

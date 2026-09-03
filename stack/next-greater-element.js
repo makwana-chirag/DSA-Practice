@@ -11,14 +11,10 @@ const nextGreaterBruteForce  = (arr) => {
             if (arr[j] > arr[i]){
                 processed.push(arr[j])
                 break
-            } else {
-
-            }
+            } 
+            processed.push(-1)
         }
-        processed.push(-1)
     }
-
-    return processed;
 }
 
 console.log(nextGreaterBruteForce(array))

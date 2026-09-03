@@ -1,6 +1,6 @@
 const array = [1,2,3,2,1]; // true
 const arraytwo = [1,2,3,2,3,2] // false 
-const arraythree = ['r','a','c','e','c','a','r'];
+const arraythree = ['r','a','c','e','c','a','r']; // true
 
 const palidrome = (arr) => {
 
