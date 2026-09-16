@@ -1,25 +1,35 @@
-// Problem : we have to found how many days until next greter temperature 
-// Example : [73, 74, 75, 71, 69, 72, 76, 73]
-// Output : [1,1,4,2,1,1,0,0]
+// Problem : Stock Span
+// Explainnation : How many consecutives previous days prices were lessthen or equal to today's price
+// Example Input : [100, 80, 60, 70, 60, 75, 85];
+// Output : [100, 80, 60, 70, 60, 75, 85];
+// Note : if no previous element lessthen or equal to then put 1
+// Approach : using monotonic stack approach 
 
-// using stack approach 
-const temperatures = [73, 74, 75, 71, 69, 72, 76, 73];
+const prices = [100, 80, 60, 70, 60, 75, 85];
 
-const distanceBtwTems = (tem) => {
+const stockSpan = (arr) => {
 
-    const answer = new Array(tem.length).fill(0)
+    const answer = new Array(arr.length).fill(-1)
 
     const stack = [];
-    
-    for ( let i = 0; i < tem.length ; i++) {
-        while(stack.length > 0 && tem[i] > tem[stack[stack.length -1]] ) {
-                   
-            answer[stack[stack.length - 1]] = i - stack[stack.length -1]
-             stack.pop() 
+
+    for( let i = 0 ; i < arr.length ; i++) 
+    {
+        while (stack.length > 0 && arr[stack[stack.length -1]] <= arr[i]) {
+          stack.pop()
+
+        }
+         
+        if(stack.length == 0) {
+         answer[i] = i + 1
+        }
+        else {
+            answer[i] = i - stack[stack.length -1]
         }
         stack.push(i)
     }
+      
     return answer;
 }
 
-console.log(distanceBtwTems(temperatures))
+console.log(stockSpan(prices))
