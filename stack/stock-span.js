@@ -1,7 +1,7 @@
 // Problem : Stock Span
 // Explainnation : How many consecutives previous days prices were lessthen or equal to today's price
 // Example Input : [100, 80, 60, 70, 60, 75, 85];
-// Output : [100, 80, 60, 70, 60, 75, 85];
+// Output : [1, 1, 1, 2, 1, 4, 6];
 // Note : if no previous element lessthen or equal to then put 1
 // Approach : using monotonic stack approach 
 
