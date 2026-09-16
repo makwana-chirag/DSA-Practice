@@ -11,7 +11,7 @@ const longestSumArray = (arr,target) => {
 
     for ( let right = 0 ; right < arr.length ; right++) {
     // in below we are adding all the element sum to windowsum
-      wndowSum += arr[right];
+      windowSum += arr[right];
 
     // we are checking if total element value sum exceed then target then we remove the last element which in our case 
     // is element that has been pointed by left and once we remove it form window sum we increaes the left 
