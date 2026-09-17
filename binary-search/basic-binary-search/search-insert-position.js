@@ -1,7 +1,7 @@
 // Problem : Search Insert Position 
 // Explainnation : given the sorted array, return the index where target exist if it didn't exist at that place then return the index where target value should be inserted
 // Example Input : [1, 3, 5, 6]; , Target : 2
-// Output : 
+// Output : 1
 // Note : none
 // Approach :Basic Binary Search 
 
