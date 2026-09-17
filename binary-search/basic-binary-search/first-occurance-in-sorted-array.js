@@ -3,7 +3,7 @@
 // Example Input : [1, 2, 2, 2, 4, 5, 7]; , Target : 2
 // Output : 1
 // Note : none 
-// Approach : Binary Search 
+// Approach : Basic Binary Search 
 
 const arr = [1, 2, 2, 2, 4, 5, 7];
 
