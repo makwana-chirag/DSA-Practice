@@ -14,8 +14,31 @@ const rotatorySorted = (arr,target) => {
    while(left <= right){
    
     let mid = Math.floor((left + right) / 2)
+          
 
-   
+    if(target === arr[mid]){
+      return mid
+    }
+    // left half is sorted
+    else if (arr[left] <= arr[mid]) {
+      // is target value is inside the sorted left side 
+      if (target >= arr[left] && target < arr[mid]) {
+            right = mid - 1;
+        } else {
+            left = mid + 1;
+        }
+    }
+    // right half is sorted (also just for understanding below condition we can just add else if left is not sorted means right must be sorted)
+    else if (arr[right] >= arr[mid]){
+
+       // is target value is inside the sorted right side
+       if (target <= arr[right] && target > arr[mid]) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+      }
+         
 
    }
 
