@@ -1,3 +1,11 @@
+// Problem : Two Sum
+// Explainnation : return the indexs of two values which sum should be the target value which is provided
+// Example Input : [1,2,4,5,6,3] , Target : 8
+// Output : [1,4]
+// Note : none 
+// Approach : Two Pointer
+
+
 
 const array = [1,2,4,5,6,3];
 
