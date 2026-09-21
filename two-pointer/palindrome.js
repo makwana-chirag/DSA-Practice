@@ -4,6 +4,8 @@ const arraythree = ['r','a','c','e','c','a','r']; // true
 
 const palidrome = (arr) => {
 
+     if(arr < 0) return false
+
      let left = 0;
      let right = arr.length -1;
 
