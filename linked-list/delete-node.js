@@ -79,8 +79,9 @@ class LinkedList  {
    }
 
    deleteLast () {
+      if (this.head === null) return;
       let current = this.head;
-      
+      if(current.next === null) return this.head = null;
       while(current.next.next !== null){
          current = current.next
       }
@@ -89,13 +90,22 @@ class LinkedList  {
    }
 
    deleteSpecific (value) {
+
+      if(this.head === null) return;
       let current = this.head
+
+     if (this.head.value === value) {
+    this.head = this.head.next;
+    return;
+}
 
       while(current.next.value !== value) {
          current = current.next
       }
 
-      current.next = current.next.next;
+ if (current.next === null) return;
+ 
+     current.next = current.next.next;
+
    }
 }
-console.log("🚀 ~ LinkedList ~ }:", })
