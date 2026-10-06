@@ -1,4 +1,11 @@
-import { TreeNode } from "../tree-node-blueprint";
+// Problem : Binary Pre-order Traversal with recursion
+// Explainnation :
+// Example Input :
+// Output : 
+// Note : none
+// Approach : 
+
+import { TreeNode } from "../tree-node-blueprint.js";
 
 const node1 = new TreeNode(10);
 const node2 = new TreeNode(5);
@@ -14,15 +21,14 @@ node2.right = node4;
 
 const root = node1;
 
-let current = root
+const preorder = (current) => {
+    if(current === null) return
+    
+        console.log(current.value)
 
-while(current !== null){
+        preorder(current.left)
 
-    if(current.left === null){
-        
-    }
-
-    if(current.right === null) {
-        
-    }
+        preorder(current.right)
 }
+
+preorder(root)
