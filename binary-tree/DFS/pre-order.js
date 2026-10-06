@@ -2,7 +2,7 @@
 // Explainnation :
 // Example Input :
 // Output : 
-// Note : none
+// Note : order should be : Root → Left → Right
 // Approach : 
 
 import { TreeNode } from "../tree-node-blueprint.js";
